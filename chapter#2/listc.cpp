@@ -14,7 +14,7 @@ int main(void) {
 	gets_s(filename);					// Step 2
 	puts(filename);
 	FILE* pFile = fopen(filename, "w");
-	fprintf(pFile, "file structure");
+	fprintf(pFile, "file structure.\n this is test file.");
 	fclose(pFile);
 	file =fopen(filename, "r");			// Step 3
 	while (fread(&ch, 1, 1, file) != 0)		// Step 4a

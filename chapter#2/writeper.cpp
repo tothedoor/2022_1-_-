@@ -1,9 +1,13 @@
 // D.7 writeper.cpp
 // write a stream of persons, using fstream.h 
 //Assignment to students - writestr.cpp를 참조하여 수정하여 완성: 실습
-#include <fstream.h>
+#include <fstream>
 #include <string.h>
-#include "readper.cpp"
+//#include "readper.cpp"
+#include "person.h"
+#include <iostream>
+
+
 const int MaxBufferSize = 200;
 int WritePerson (ostream & stream, Person & p)
 {	char buffer [MaxBufferSize];
