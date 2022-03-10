@@ -3,3 +3,7 @@
 \x64
 
 *.opendb
+
+*.sln
+*.vcxproj
+*.vcxproj.*

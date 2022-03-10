@@ -11,20 +11,21 @@ class Student
 {
 public:
 	// data members
-	int Identifier; char Name[11]; char Address[16];
-	char DateOfFirstEnrollment[8]; int NumberOfCreditHourse;
+	int Identifier;
+	char Name[11];
+	char Address[16];
+	char DateOfFirstEnrollment[8];
+	int NumberOfCreditHourse;
 	// method
-	Student(); // default constructor
-	Student& operator = (const Student&); // assign operator
+	Student();							 // default constructor
+	Student &operator=(const Student &); // assign operator
 
-	// 필드값 갱신 methods
 	void setIdentifier(int newIdentifier);
 	void setName(char newName[]);
 	void setAddress(char newAddr);
 	void setDateOfFirstEnrollment(char newDate[]);
 	void setNumberOfCreditHourse(int newValue);
-	
-	// 이수학점 증가 method
+
 	void addCreditHourse(int value);
 };
 
