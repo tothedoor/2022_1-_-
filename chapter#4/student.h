@@ -1,11 +1,5 @@
-#pragma once
 #ifndef STUDENT
 #define STUDENT
-
-#include <iostream>
-#include <stdlib.h>
-
-using namespace std;
 
 class Student
 {
@@ -22,22 +16,10 @@ public:
 
 	void setIdentifier(int newIdentifier);
 	void setName(char newName[]);
-	void setAddress(char newAddr);
+	void setAddress(char newAddr[]);
 	void setDateOfFirstEnrollment(char newDate[]);
 	void setNumberOfCreditHourse(int newValue);
 
 	void addCreditHourse(int value);
 };
-
-
-Student::Student()
-{//constructor
-	Identifier = 0;
-	Name[0] = 0;
-	Address[0] = 0;
-	DateOfFirstEnrollment[0] = 0;
-	NumberOfCreditHourse = 0;
-}
-
-
 #endif

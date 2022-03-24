@@ -1,4 +1,4 @@
-#include "Student.h"
+#include "student.h"
 
 Student &Student::operator=(const Student &student)
 {
