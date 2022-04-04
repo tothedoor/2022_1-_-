@@ -8,5 +8,9 @@
 *.vcxproj
 *.vcxproj.*
 
+# ignore all .txt files and .dat files
 *.txt
 *.dat
+
+# ignore all files in 'unused'
+unused/
