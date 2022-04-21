@@ -19,7 +19,7 @@ public:
 	void Clear();
 	int Unpack(IOBuffer& Buffer);
 	int Pack(IOBuffer& Buffer) const;
-	char* Key() const; // return key of Student
+	char* Key() const; // return key of Student (TextIndexedFile을 이용하기 위해서는 key가 필요하다!!)
 	void Print(ostream& stream, char* label = 0) const;
 	
 	static int InitBuffer(DelimFieldBuffer& Buffer);
