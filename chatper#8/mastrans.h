@@ -20,7 +20,7 @@ class MasterTransactionProcess: public CosequentialProcess<ItemType>
 
 template <class ItemType>
 MasterTransactionProcess<ItemType>::MasterTransactionProcess ()
-: CosequentialProcess<int>(2)
+: CosequentialProcess<int>(2) // 처리해야할 list가 2개이므로!!
 {}
 
 template <class ItemType>
@@ -35,19 +35,19 @@ int MasterTransactionProcess<ItemType>::PostTransactions (char * MasterFileName,
 	if (MoreMasters) ProcessNewMaster(); // process first master
 	cout << "Master::" << Item(1) << "  " << Item(2) << endl;
 	while (MoreMasters || MoreTransactions){// if either file has more
-		if (Item(1) < Item(2))
+		if (Item(1) < Item(2)) // 다음 account(ledger 상의)에 대한 trasaction인 경우
 		{// finish this master record
 			ProcessEndMaster();
 			MoreMasters = NextItemInList(1);
 			if (MoreMasters) ProcessNewMaster(); 
 		}
-		else if (Item(1) == Item(2)) // Transaction matches Master
+		else if (Item(1) == Item(2)) // transaction과 master가 일치하는 경우 (leger의 accountnum과 jounal의 accountnum이 일치)
 		{
 			ProcessCurrentMaster(); // another transaction for the master
 			ProcessItem (2);// output transaction record
 			MoreTransactions = NextItemInList(2);
 		}
-		else // Item(1) > Item(2)
+		else // Item(1) > Item(2) // order가 잘 못되어 error가 발생한 경우
 		{// transaction with no master
 			ProcessTransactionError();
 			MoreTransactions = NextItemInList(2);

@@ -16,7 +16,7 @@ class LedgerProcess: public MasterTransactionProcess<int>
 
 	// Basic list processing methods
 	int InitializeList (int ListNumber, char * List1Name);
-	int InitializeOutput (char * OutputListName);
+	int InitializeOutput (char * outputListName);
 	int NextItemInList (int ListNumber); //get next item from this list
 	int Item (int ListNumber); // return current item from this list
 	int ProcessItem (int ListNumber); // process the item in this list

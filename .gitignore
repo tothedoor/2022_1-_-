@@ -1,12 +1,11 @@
+# ignore files and directory about VS project
 \.vs
-
 \x64
-
 *.opendb
-
 *.sln
 *.vcxproj
 *.vcxproj.*
+\Debug
 
 # ignore all .txt files and .dat files
 *.txt
